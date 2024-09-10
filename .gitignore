@@ -161,3 +161,4 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 .idea/
 codingSkillsEvaluation/.idea/
+codingSkillsEvaluation/pep8_chroma
