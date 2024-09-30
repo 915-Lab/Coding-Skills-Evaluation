@@ -3,18 +3,18 @@
 # 1\. Whetting Your Appetite
 
 
-If you do much work on computers, eventually you find that thereâs some task
-youâd like to automate. For example, you may wish to perform a
+If you do much work on computers, eventually you find that there’s some task
+you’d like to automate. For example, you may wish to perform a
 search\-and\-replace over a large number of text files, or rename and rearrange a
-bunch of photo files in a complicated way. Perhaps youâd like to write a small
+bunch of photo files in a complicated way. Perhaps you’d like to write a small
 custom database, or a specialized GUI application, or a simple game.
 
 
-If youâre a professional software developer, you may have to work with several
+If you’re a professional software developer, you may have to work with several
 C/C\+\+/Java libraries but find the usual write/compile/test/re\-compile cycle is
-too slow. Perhaps youâre writing a test suite for such a library and find
-writing the testing code a tedious task. Or maybe youâve written a program that
-could use an extension language, and you donât want to design and implement a
+too slow. Perhaps you’re writing a test suite for such a library and find
+writing the testing code a tedious task. Or maybe you’ve written a program that
+could use an extension language, and you don’t want to design and implement a
 whole new language for your application.
 
 
@@ -40,7 +40,7 @@ Perl, yet many things are at least as easy in Python as in those languages.
 
 Python allows you to split your program into modules that can be reused in other
 Python programs. It comes with a large collection of standard modules that you
-can use as the basis of your programs â or as examples to start learning to
+can use as the basis of your programs — or as examples to start learning to
 program in Python. Some of these modules provide things like file I/O, system
 calls, sockets, and even interfaces to graphical user interface toolkits like
 Tk.
@@ -74,12 +74,12 @@ application written in C and use it as an extension or command language for that
 application.
 
 
-By the way, the language is named after the BBC show âMonty Pythonâs Flying
-Circusâ and has nothing to do with reptiles. Making references to Monty
+By the way, the language is named after the BBC show “Monty Python’s Flying
+Circus” and has nothing to do with reptiles. Making references to Monty
 Python skits in documentation is not only allowed, it is encouraged!
 
 
-Now that you are all excited about Python, youâll want to examine it in some
+Now that you are all excited about Python, you’ll want to examine it in some
 more detail. Since the best way to learn a language is to use it, the tutorial
 invites you to play with the Python interpreter as you read.
 
@@ -110,7 +110,7 @@ concepts like exceptions and user\-defined classes.
 
 The Python interpreter is usually installed as `/usr/local/bin/python3.11`
 on those machines where it is available; putting `/usr/local/bin` in your
-Unix shellâs search path makes it possible to start it by typing the command:
+Unix shell’s search path makes it possible to start it by typing the command:
 
 
 
@@ -133,17 +133,17 @@ command. See [Excursus: Setting environment variables](../using/windows.html#set
 
 Typing an end\-of\-file character (`Control-D` on Unix, `Control-Z` on
 Windows) at the primary prompt causes the interpreter to exit with a zero exit
-status. If that doesnât work, you can exit the interpreter by typing the
+status. If that doesn’t work, you can exit the interpreter by typing the
 following command: `quit()`.
 
 
-The interpreterâs line\-editing features include interactive editing, history
+The interpreter’s line\-editing features include interactive editing, history
 substitution and code completion on systems that support the [GNU Readline](https://tiswww.case.edu/php/chet/readline/rltop.html) library.
 Perhaps the quickest check to see whether command line editing is supported is
 typing `Control-P` to the first Python prompt you get. If it beeps, you
 have command line editing; see Appendix [Interactive Input Editing and History Substitution](interactive.html#tut-interacting) for an
 introduction to the keys. If nothing appears to happen, or if `^P` is
-echoed, command line editing isnât available; youâll only be able to use
+echoed, command line editing isn’t available; you’ll only be able to use
 backspace to remove characters from the current line.
 
 
@@ -154,7 +154,7 @@ and executes a *script* from that file.
 
 
 A second way of starting the interpreter is `python -c command [arg] ...`,
-which executes the statement(s) in *command*, analogous to the shellâs
+which executes the statement(s) in *command*, analogous to the shell’s
 [`-c`](../using/cmdline.html#cmdoption-c) option. Since Python statements often contain spaces or other
 characters that are special to the shell, it is usually advised to quote
 *command* in its entirety.
@@ -186,7 +186,7 @@ are given, `sys.argv[0]` is an empty string. When the script name is given as
 [`-c`](../using/cmdline.html#cmdoption-c) *command* is used, `sys.argv[0]` is set to `'-c'`. When
 [`-m`](../using/cmdline.html#cmdoption-m) *module* is used, `sys.argv[0]` is set to the full name of the
 located module. Options found after [`-c`](../using/cmdline.html#cmdoption-c) *command* or [`-m`](../using/cmdline.html#cmdoption-m)
-*module* are not consumed by the Python interpreterâs option processing but
+*module* are not consumed by the Python interpreter’s option processing but
 left in `sys.argv` for the command or module to handle.
 
 
@@ -244,7 +244,7 @@ For more on interactive mode, see [Interactive Mode](appendix.html#tut-interac).
 
 By default, Python source files are treated as encoded in UTF\-8\. In that
 encoding, characters of most languages in the world can be used simultaneously
-in string literals, identifiers and comments â although the standard library
+in string literals, identifiers and comments — although the standard library
 only uses ASCII characters for identifiers, a convention that any portable code
 should follow. To display all these characters properly, your editor must
 recognize that the file is UTF\-8, and it must use a font that supports all the
@@ -277,7 +277,7 @@ line of your source code file should be:
 
 
 One exception to the *first line* rule is when the source code starts with a
-[UNIX âshebangâ line](appendix.html#tut-scripts). In this case, the encoding
+[UNIX “shebang” line](appendix.html#tut-scripts). In this case, the encoding
 declaration should be added as the second line of the file. For example:
 
 
@@ -314,7 +314,7 @@ simultaneously installed Python 2\.x executable.
 
 
 In the following examples, input and output are distinguished by the presence or
-absence of prompts ([\>\>\>](../glossary.html#term-0) and [â¦](../glossary.html#term-...)): to repeat the example, you must type
+absence of prompts ([\>\>\>](../glossary.html#term-0) and […](../glossary.html#term-...)): to repeat the example, you must type
 everything after the prompt, when the prompt appears; lines that do not begin
 with a prompt are output from the interpreter. Note that a secondary prompt on a
 line by itself in an example means you must type a blank line; this is used to
@@ -353,8 +353,8 @@ text = "# This is not a comment because it's inside quotes."
 ## 3\.1\. Using Python as a Calculator
 
 
-Letâs try some simple Python commands. Start the interpreter and wait for the
-primary prompt, `>>>`. (It shouldnât take long.)
+Let’s try some simple Python commands. Start the interpreter and wait for the
+primary prompt, `>>>`. (It shouldn’t take long.)
 
 
 
@@ -434,7 +434,7 @@ result is displayed before the next interactive prompt:
 ```
 
 
-If a variable is not âdefinedâ (assigned a value), trying to use it will
+If a variable is not “defined” (assigned a value), trying to use it will
 give you an error:
 
 
@@ -479,8 +479,8 @@ somewhat easier to continue calculations, for example:
 ```
 
 
-This variable should be treated as read\-only by the user. Donât explicitly
-assign a value to it â you would create an independent local variable with the
+This variable should be treated as read\-only by the user. Don’t explicitly
+assign a value to it — you would create an independent local variable with the
 same name masking the built\-in variable with its magic behavior.
 
 
@@ -497,9 +497,9 @@ and uses the `j` or `J` suffix to indicate the imaginary part
 
 
 Python can manipulate text (represented by type [`str`](../library/stdtypes.html#str "str"), so\-called
-âstringsâ) as well as numbers. This includes characters â`!`â, words
-â`rabbit`â, names â`Paris`â, sentences â`Got your back.`â, etc.
-â`Yay! :)`â. They can be enclosed in single quotes (`'...'`) or double
+“strings”) as well as numbers. This includes characters “`!`”, words
+“`rabbit`”, names “`Paris`”, sentences “`Got your back.`”, etc.
+“`Yay! :)`”. They can be enclosed in single quotes (`'...'`) or double
 quotes (`"..."`) with the same result [\[2]](#id4).
 
 
@@ -515,7 +515,7 @@ quotes (`"..."`) with the same result [\[2]](#id4).
 ```
 
 
-To quote a quote, we need to âescapeâ it, by preceding it with `\`.
+To quote a quote, we need to “escape” it, by preceding it with `\`.
 Alternatively, we can use the other type of quotation marks:
 
 
@@ -552,7 +552,7 @@ Second line.
 ```
 
 
-If you donât want characters prefaced by `\` to be interpreted as
+If you don’t want characters prefaced by `\` to be interpreted as
 special characters, you can use *raw strings* by adding an `r` before
 the first quote:
 
@@ -576,7 +576,7 @@ and workarounds.
 
 String literals can span multiple lines. One way is using triple\-quotes:
 `"""..."""` or `'''...'''`. End of lines are automatically
-included in the string, but itâs possible to prevent this by adding a `\` at
+included in the string, but it’s possible to prevent this by adding a `\` at
 the end of the line. The following example:
 
 
@@ -767,7 +767,7 @@ index *n*, for example:
 ```
 
 
-The first row of numbers gives the position of the indices 0â¦6 in the string;
+The first row of numbers gives the position of the indices 0…6 in the string;
 the second row gives the corresponding negative indices. The slice from *i* to
 *j* consists of all characters between the edges labeled *i* and *j*,
 respectively.
@@ -805,7 +805,7 @@ slicing:
 ```
 
 
-Python strings cannot be changed â they are [immutable](../glossary.html#term-immutable).
+Python strings cannot be changed — they are [immutable](../glossary.html#term-immutable).
 Therefore, assigning to an indexed position in the string results in an error:
 
 
@@ -853,7 +853,7 @@ See also
 
 
 
-[Text Sequence Type â str](../library/stdtypes.html#textseq)Strings are examples of *sequence types*, and support the common
+[Text Sequence Type — str](../library/stdtypes.html#textseq)Strings are examples of *sequence types*, and support the common
 operations supported by such types.
 
 
@@ -1095,7 +1095,7 @@ used in the example is a simple comparison. The standard comparison operators
 are written the same as in C: `<` (less than), `>` (greater than), `==`
 (equal to), `<=` (less than or equal to), `>=` (greater than or equal to)
 and `!=` (not equal to).
-* The *body* of the loop is *indented*: indentation is Pythonâs way of grouping
+* The *body* of the loop is *indented*: indentation is Python’s way of grouping
 statements. At the interactive prompt, you have to type a tab or space(s) for
 each indented line. In practice you will prepare more complicated input
 for Python with a text editor; all decent text editors have an auto\-indent
@@ -1152,7 +1152,7 @@ and get `9`, you can use `(-3)**2`.
 \[[2](#id2)]
 Unlike other languages, special characters such as `\n` have the
 same meaning with both single (`'...'`) and double (`"..."`) quotes.
-The only difference between the two is that within single quotes you donât
+The only difference between the two is that within single quotes you don’t
 need to escape `"` (but you have to escape `\'`) and vice versa.
 
 
@@ -1200,13 +1200,13 @@ More
 
 
 There can be zero or more [`elif`](../reference/compound_stmts.html#elif) parts, and the [`else`](../reference/compound_stmts.html#else) part is
-optional. The keyword â`elif`â is short for âelse ifâ, and is useful
-to avoid excessive indentation. An `if` â¦ `elif` â¦
-`elif` â¦ sequence is a substitute for the `switch` or
+optional. The keyword ‘`elif`’ is short for ‘else if’, and is useful
+to avoid excessive indentation. An `if` … `elif` …
+`elif` … sequence is a substitute for the `switch` or
 `case` statements found in other languages.
 
 
-If youâre comparing the same value to several constants, or checking for specific types or
+If you’re comparing the same value to several constants, or checking for specific types or
 attributes, you may also find the `match` statement useful. For more
 details see [match Statements](#tut-match).
 
@@ -1219,7 +1219,7 @@ details see [match Statements](#tut-match).
 The [`for`](../reference/compound_stmts.html#for) statement in Python differs a bit from what you may be used
 to in C or Pascal. Rather than always iterating over an arithmetic progression
 of numbers (like in Pascal), or giving the user the ability to define both the
-iteration step and halting condition (as C), Pythonâs `for` statement
+iteration step and halting condition (as C), Python’s `for` statement
 iterates over the items of any sequence (a list or a string), in the order that
 they appear in the sequence. For example (no pun intended):
 
@@ -1246,7 +1246,7 @@ over a copy of the collection or to create a new collection:
 
 ```
 # Create a sample collection
-users = {'Hans': 'active', 'ÃlÃ©onore': 'inactive', 'æ¯å¤ªé': 'active'}
+users = {'Hans': 'active', 'Éléonore': 'inactive', '景太郎': 'active'}
 
 # Strategy:  Iterate over a copy
 for user, status in users.copy().items():
@@ -1288,7 +1288,7 @@ If you do need to iterate over a sequence of numbers, the built\-in function
 The given end point is never part of the generated sequence; `range(10)` generates
 10 values, the legal indices for items of a sequence of length 10\. It
 is possible to let the range start at another number, or to specify a different
-increment (even negative; sometimes this is called the âstepâ):
+increment (even negative; sometimes this is called the ‘step’):
 
 
 
@@ -1340,8 +1340,8 @@ range(0, 10)
 
 
 In many ways the object returned by [`range()`](../library/stdtypes.html#range "range") behaves as if it is a list,
-but in fact it isnât. It is an object which returns the successive items of
-the desired sequence when you iterate over it, but it doesnât really make
+but in fact it isn’t. It is an object which returns the successive items of
+the desired sequence when you iterate over it, but it doesn’t really make
 the list, thus saving space.
 
 
@@ -1381,7 +1381,7 @@ In a [`for`](../reference/compound_stmts.html#for) loop, the `else` clause is ex
 after the loop reaches its final iteration.
 
 
-In a [`while`](../reference/compound_stmts.html#while) loop, itâs executed after the loopâs condition becomes false.
+In a [`while`](../reference/compound_stmts.html#while) loop, it’s executed after the loop’s condition becomes false.
 
 
 In either kind of loop, the `else` clause is **not** executed
@@ -1421,8 +1421,8 @@ the [`for`](../reference/compound_stmts.html#for) loop, **not** the [`if`](../re
 
 When used with a loop, the `else` clause has more in common with the
 `else` clause of a [`try`](../reference/compound_stmts.html#try) statement than it does with that of
-[`if`](../reference/compound_stmts.html#if) statements: a [`try`](../reference/compound_stmts.html#try) statementâs `else` clause runs
-when no exception occurs, and a loopâs `else` clause runs when no `break`
+[`if`](../reference/compound_stmts.html#if) statements: a [`try`](../reference/compound_stmts.html#try) statement’s `else` clause runs
+when no exception occurs, and a loop’s `else` clause runs when no `break`
 occurs. For more on the `try` statement and exceptions, see
 [Handling Exceptions](errors.html#tut-handling).
 
@@ -1503,7 +1503,7 @@ at a more abstract level. The `pass` is silently ignored:
 A [`match`](../reference/compound_stmts.html#match) statement takes an expression and compares its value to successive
 patterns given as one or more case blocks. This is superficially
 similar to a switch statement in C, Java or JavaScript (and many
-other languages), but itâs more similar to pattern matching in
+other languages), but it’s more similar to pattern matching in
 languages like Rust or Haskell. Only the first pattern that matches
 gets executed and it can also extract components (sequence elements
 or object attributes) from the value into variables.
@@ -1528,11 +1528,11 @@ def http_error(status):
 ```
 
 
-Note the last block: the âvariable nameâ `_` acts as a *wildcard* and
+Note the last block: the “variable name” `_` acts as a *wildcard* and
 never fails to match. If no case matches, none of the branches is executed.
 
 
-You can combine several literals in a single pattern using `|` (âorâ):
+You can combine several literals in a single pattern using `|` (“or”):
 
 
 
@@ -1604,7 +1604,7 @@ def where_is(point):
 You can use positional parameters with some builtin classes that provide an
 ordering for their attributes (e.g. dataclasses). You can also define a specific
 position for attributes in patterns by setting the `__match_args__` special
-attribute in your classes. If itâs set to (âxâ, âyâ), the following patterns are all
+attribute in your classes. If it’s set to (“x”, “y”), the following patterns are all
 equivalent (and all bind the `y` attribute to the `var` variable):
 
 
@@ -1623,7 +1623,7 @@ would put on the left of an assignment, to understand which variables would be s
 what.
 Only the standalone names (like `var` above) are assigned to by a match statement.
 Dotted names (like `foo.bar`), attribute names (the `x=` and `y=` above) or class names
-(recognized by the â(â¦)â next to them like `Point` above) are never assigned to.
+(recognized by the “(…)” next to them like `Point` above) are never assigned to.
 
 
 Patterns can be arbitrarily nested. For example, if we have a short
@@ -1653,7 +1653,7 @@ match points:
 ```
 
 
-We can add an `if` clause to a pattern, known as a âguardâ. If the
+We can add an `if` clause to a pattern, known as a “guard”. If the
 guard is false, `match` goes on to try the next case block. Note
 that value capture happens before the guard is evaluated:
 
@@ -1674,7 +1674,7 @@ Several other key features of this statement:
 
 * Like unpacking assignments, tuple and list patterns have exactly the
 same meaning and actually match arbitrary sequences. An important
-exception is that they donât match iterators or strings.
+exception is that they don’t match iterators or strings.
 * Sequence patterns support extended unpacking: `[x, y, *rest]` and `(x, y,
 *rest)` work similar to unpacking assignments. The
 name after `*` may also be `_`, so `(x, y, *_)` matches a sequence
@@ -1759,10 +1759,10 @@ must be indented.
 
 
 The first statement of the function body can optionally be a string literal;
-this string literal is the functionâs documentation string, or *docstring*.
+this string literal is the function’s documentation string, or *docstring*.
 (More about docstrings can be found in the section [Documentation Strings](#tut-docstrings).)
 There are tools which use docstrings to automatically produce online or printed
-documentation, or to let the user interactively browse through code; itâs good
+documentation, or to let the user interactively browse through code; it’s good
 practice to include docstrings in code that you write, so make a habit of it.
 
 
@@ -1804,9 +1804,9 @@ function object and can also be used to access the function:
 
 
 Coming from other languages, you might object that `fib` is not a function but
-a procedure since it doesnât return a value. In fact, even functions without a
+a procedure since it doesn’t return a value. In fact, even functions without a
 [`return`](../reference/simple_stmts.html#return) statement do return a value, albeit a rather boring one. This
-value is called `None` (itâs a built\-in name). Writing the value `None` is
+value is called `None` (it’s a built\-in name). Writing the value `None` is
 normally suppressed by the interpreter if it would be the only value written.
 You can see it if you really want to using [`print()`](../library/functions.html#print "print"):
 
@@ -1849,9 +1849,9 @@ This example, as usual, demonstrates some new Python features:
 `return` without an expression argument returns `None`. Falling off
 the end of a function also returns `None`.
 * The statement `result.append(a)` calls a *method* of the list object
-`result`. A method is a function that âbelongsâ to an object and is named
+`result`. A method is a function that ‘belongs’ to an object and is named
 `obj.methodname`, where `obj` is some object (this may be an expression),
-and `methodname` is the name of a method that is defined by the objectâs type.
+and `methodname` is the name of a method that is defined by the object’s type.
 Different types define different methods. Methods of different types may have
 the same name without causing ambiguity. (It is possible to define your own
 object types and methods, using *classes*, see [Classes](classes.html#tut-classes))
@@ -1961,7 +1961,7 @@ This will print
 ```
 
 
-If you donât want the default to be shared between subsequent calls, you can
+If you don’t want the default to be shared between subsequent calls, you can
 write the function like this instead:
 
 
@@ -2032,7 +2032,7 @@ accepted by the function (e.g. `actor` is not a valid argument for the
 `parrot` function), and their order is not important. This also includes
 non\-optional arguments (e.g. `parrot(voltage=1000)` is valid too).
 No argument may receive a value more than once.
-Hereâs an example that fails due to this restriction:
+Here’s an example that fails due to this restriction:
 
 
 
@@ -2049,7 +2049,7 @@ TypeError: function() got multiple values for argument 'a'
 
 
 When a final formal parameter of the form `**name` is present, it receives a
-dictionary (see [Mapping Types â dict](../library/stdtypes.html#typesmapping)) containing all keyword arguments except for
+dictionary (see [Mapping Types — dict](../library/stdtypes.html#typesmapping)) containing all keyword arguments except for
 those corresponding to a formal parameter. This may be combined with a formal
 parameter of the form `*name` (described in the next subsection) which
 receives a [tuple](datastructures.html#tut-tuples) containing the positional
@@ -2153,7 +2153,7 @@ be passed to a function by position or by keyword.
 
 
 Looking at this in a bit more detail, it is possible to mark certain parameters
-as *positional\-only*. If *positional\-only*, the parametersâ order matters, and
+as *positional\-only*. If *positional\-only*, the parameters’ order matters, and
 the parameters cannot be passed by keyword. Positional\-only parameters are
 placed before a `/` (forward\-slash). The `/` is used to logically
 separate the positional\-only parameters from the rest of the parameters.
@@ -2346,7 +2346,7 @@ keywords.
 more understandable by being explicit with names or you want to prevent
 users relying on the position of the argument being passed.
 * For an API, use positional\-only to prevent breaking API changes
-if the parameterâs name is modified in the future.
+if the parameter’s name is modified in the future.
 
 
 
@@ -2372,7 +2372,7 @@ def write_multiple_items(file, separator, *args):
 Normally, these *variadic* arguments will be last in the list of formal
 parameters, because they scoop up all remaining input arguments that are
 passed to the function. Any formal parameters which occur after the `*args`
-parameter are âkeyword\-onlyâ arguments, meaning that they can only be used as
+parameter are ‘keyword\-only’ arguments, meaning that they can only be used as
 keywords rather than positional arguments.
 
 
@@ -2482,16 +2482,16 @@ Here are some conventions about the content and formatting of documentation
 strings.
 
 
-The first line should always be a short, concise summary of the objectâs
-purpose. For brevity, it should not explicitly state the objectâs name or type,
+The first line should always be a short, concise summary of the object’s
+purpose. For brevity, it should not explicitly state the object’s name or type,
 since these are available by other means (except if the name happens to be a
-verb describing a functionâs operation). This line should begin with a capital
+verb describing a function’s operation). This line should begin with a capital
 letter and end with a period.
 
 
 If there are more lines in the documentation string, the second line should be
 blank, visually separating the summary from the rest of the description. The
-following lines should be one or more paragraphs describing the objectâs calling
+following lines should be one or more paragraphs describing the object’s calling
 conventions, its side effects, etc.
 
 
@@ -2499,9 +2499,9 @@ The Python parser does not strip indentation from multi\-line string literals in
 Python, so tools that process documentation have to strip indentation if
 desired. This is done using the following convention. The first non\-blank line
 *after* the first line of the string determines the amount of indentation for
-the entire documentation string. (We canât use the first line since it is
-generally adjacent to the stringâs opening quotes so its indentation is not
-apparent in the string literal.) Whitespace âequivalentâ to this indentation is
+the entire documentation string. (We can’t use the first line since it is
+generally adjacent to the string’s opening quotes so its indentation is not
+apparent in the string literal.) Whitespace “equivalent” to this indentation is
 then stripped from the start of all lines of the string. Lines that are
 indented less should not occur, but if they occur all their leading whitespace
 should be stripped. Equivalence of whitespace should be tested after expansion
@@ -2588,7 +2588,7 @@ extracted for you:
 4 spaces are a good compromise between small indentation (allows greater
 nesting depth) and large indentation (easier to read). Tabs introduce
 confusion, and are best left out.
-* Wrap lines so that they donât exceed 79 characters.
+* Wrap lines so that they don’t exceed 79 characters.
 
 
 This helps users with small displays and makes it possible to have several
@@ -2603,10 +2603,10 @@ bracketing constructs: `a = f(1, 2) + g(3, 4)`.
 `UpperCamelCase` for classes and `lowercase_with_underscores` for functions
 and methods. Always use `self` as the name for the first method argument
 (see [A First Look at Classes](classes.html#tut-firstclasses) for more on classes and methods).
-* Donât use fancy encodings if your code is meant to be used in international
-environments. Pythonâs default, UTF\-8, or even plain ASCII work best in any
+* Don’t use fancy encodings if your code is meant to be used in international
+environments. Python’s default, UTF\-8, or even plain ASCII work best in any
 case.
-* Likewise, donât use non\-ASCII characters in identifiers if there is only the
+* Likewise, don’t use non\-ASCII characters in identifiers if there is only the
 slightest chance people speaking a different language will read or maintain
 the code.
 
@@ -2634,7 +2634,7 @@ callee makes to it (items inserted into a list).
 # 5\. Data Structures
 
 
-This chapter describes some things youâve learned about already in more detail,
+This chapter describes some things you’ve learned about already in more detail,
 and adds some new things as well.
 
 
@@ -2768,16 +2768,16 @@ An example that uses most of the list methods:
 
 
 You might have noticed that methods like `insert`, `remove` or `sort` that
-only modify the list have no return value printed â they return the default
+only modify the list have no return value printed – they return the default
 `None`. [\[1]](#id2) This is a design principle for all mutable data structures in
 Python.
 
 
 Another thing you might notice is that not all data can be sorted or
-compared. For instance, `[None, 'hello', 10]` doesnât sort because
-integers canât be compared to strings and *None* canât be compared to
-other types. Also, there are some types that donât have a defined
-ordering relation. For example, `3+4j < 5+7j` isnât a valid
+compared. For instance, `[None, 'hello', 10]` doesn’t sort because
+integers can’t be compared to strings and *None* can’t be compared to
+other types. Also, there are some types that don’t have a defined
+ordering relation. For example, `3+4j < 5+7j` isn’t a valid
 comparison.
 
 
@@ -2786,7 +2786,7 @@ comparison.
 
 
 The list methods make it very easy to use a list as a stack, where the last
-element added is the first element retrieved (âlast\-in, first\-outâ). To add an
+element added is the first element retrieved (“last\-in, first\-out”). To add an
 item to the top of the stack, use `append()`. To retrieve an item from the
 top of the stack, use `pop()` without an explicit index. For example:
 
@@ -2818,7 +2818,7 @@ top of the stack, use `pop()` without an explicit index. For example:
 
 
 It is also possible to use a list as a queue, where the first element added is
-the first element retrieved (âfirst\-in, first\-outâ); however, lists are not
+the first element retrieved (“first\-in, first\-out”); however, lists are not
 efficient for this purpose. While appends and pops from the end of list are
 fast, doing inserts or pops from the beginning of a list is slow (because all
 of the other elements have to be shifted by one).
@@ -2911,7 +2911,7 @@ equal:
 ```
 
 
-and itâs equivalent to:
+and it’s equivalent to:
 
 
 
@@ -3107,7 +3107,7 @@ of an empty list to the slice). For example:
 
 
 Referencing the name `a` hereafter is an error (at least until another value
-is assigned to it). Weâll find other uses for [`del`](../reference/simple_stmts.html#del) later.
+is assigned to it). We’ll find other uses for [`del`](../reference/simple_stmts.html#del) later.
 
 
 
@@ -3117,7 +3117,7 @@ is assigned to it). Weâll find other uses for [`del`](../reference/simple_s
 
 We saw that lists and strings have many common properties, such as indexing and
 slicing operations. They are two examples of *sequence* data types (see
-[Sequence Types â list, tuple, range](../library/stdtypes.html#typesseq)). Since Python is an evolving language, other sequence data
+[Sequence Types — list, tuple, range](../library/stdtypes.html#typesseq)). Since Python is an evolving language, other sequence data
 types may be added. There is also another standard sequence data type: the
 *tuple*.
 
@@ -3272,13 +3272,13 @@ are also supported:
 
 
 Another useful data type built into Python is the *dictionary* (see
-[Mapping Types â dict](../library/stdtypes.html#typesmapping)). Dictionaries are sometimes found in other languages as
-âassociative memoriesâ or âassociative arraysâ. Unlike sequences, which are
+[Mapping Types — dict](../library/stdtypes.html#typesmapping)). Dictionaries are sometimes found in other languages as
+“associative memories” or “associative arrays”. Unlike sequences, which are
 indexed by a range of numbers, dictionaries are indexed by *keys*, which can be
 any immutable type; strings and numbers can always be keys. Tuples can be used
 as keys if they contain only strings, numbers, or tuples; if a tuple contains
 any mutable object either directly or indirectly, it cannot be used as a key.
-You canât use lists as keys, since lists can be modified in place using index
+You can’t use lists as keys, since lists can be modified in place using index
 assignments, slice assignments, or methods like `append()` and
 `extend()`.
 
@@ -3620,7 +3620,7 @@ somewhat longer program, you are better off using a text editor to prepare the
 input for the interpreter and running it with that file as input instead. This
 is known as creating a *script*. As your program gets longer, you may want to
 split it into several files for easier maintenance. You may also want to use a
-handy function that youâve written in several programs without copying its
+handy function that you’ve written in several programs without copying its
 definition into each program.
 
 
@@ -3633,7 +3633,7 @@ script executed at the top level and in calculator mode).
 
 A module is a file containing Python definitions and statements. The file name
 is the module name with the suffix `.py` appended. Within a module, the
-moduleâs name (as a string) is available as the value of the global variable
+module’s name (as a string) is available as the value of the global variable
 `__name__`. For instance, use your favorite text editor to create a file
 called `fibo.py` in the current directory with the following contents:
 
@@ -3714,19 +3714,19 @@ the *first* time the module name is encountered in an import statement. [\[1]](#
 Each module has its own private namespace, which is used as the global namespace
 by all functions defined in the module. Thus, the author of a module can
 use global variables in the module without worrying about accidental clashes
-with a userâs global variables. On the other hand, if you know what you are
-doing you can touch a moduleâs global variables with the same notation used to
+with a user’s global variables. On the other hand, if you know what you are
+doing you can touch a module’s global variables with the same notation used to
 refer to its functions, `modname.itemname`.
 
 
 Modules can import other modules. It is customary but not required to place all
 [`import`](../reference/simple_stmts.html#import) statements at the beginning of a module (or script, for that
 matter). The imported module names, if placed at the top level of a module
-(outside any functions or classes), are added to the moduleâs global namespace.
+(outside any functions or classes), are added to the module’s global namespace.
 
 
 There is a variant of the [`import`](../reference/simple_stmts.html#import) statement that imports names from a
-module directly into the importing moduleâs namespace. For example:
+module directly into the importing module’s namespace. For example:
 
 
 
@@ -3800,7 +3800,7 @@ Note
 
 For efficiency reasons, each module is only imported once per interpreter
 session. Therefore, if you change your modules, you must restart the
-interpreter â or, if itâs just one module you want to test interactively,
+interpreter – or, if it’s just one module you want to test interactively,
 use [`importlib.reload()`](../library/importlib.html#importlib.reload "importlib.reload"), e.g. `import importlib;
 importlib.reload(modulename)`.
 
@@ -3836,7 +3836,7 @@ if __name__ == "__main__":
 
 you can make the file usable as a script as well as an importable module,
 because the code that parses the command line only runs if the module is
-executed as the âmainâ file:
+executed as the “main” file:
 
 
 
@@ -3905,7 +3905,7 @@ directory. This is an error unless the replacement is intended. See section
 
 
 
-### 6\.1\.3\. âCompiledâ Python files
+### 6\.1\.3\. “Compiled” Python files
 
 
 To speed up loading modules, Python caches the compiled version of each module
@@ -3918,13 +3918,13 @@ versions of Python to coexist.
 
 
 Python checks the modification date of the source against the compiled version
-to see if itâs out of date and needs to be recompiled. This is a completely
+to see if it’s out of date and needs to be recompiled. This is a completely
 automatic process. Also, the compiled modules are platform\-independent, so the
 same library can be shared among systems with different architectures.
 
 
 Python does not check the cache in two circumstances. First, it always
-recompiles and does not store the result for the module thatâs loaded directly
+recompiles and does not store the result for the module that’s loaded directly
 from the command line. Second, it does not check the cache if there is no
 source module. To support a non\-source (compiled only) distribution, the
 compiled module must be in the source directory, and there must not be a source
@@ -3938,11 +3938,11 @@ Some tips for experts:
 to reduce the size of a compiled module. The `-O` switch removes assert
 statements, the `-OO` switch removes both assert statements and \_\_doc\_\_
 strings. Since some programs may rely on having these available, you should
-only use this option if you know what youâre doing. âOptimizedâ modules have
+only use this option if you know what you’re doing. “Optimized” modules have
 an `opt-` tag and are usually smaller. Future releases may
 change the effects of optimization.
-* A program doesnât run any faster when it is read from a `.pyc`
-file than when it is read from a `.py` file; the only thing thatâs faster
+* A program doesn’t run any faster when it is read from a `.pyc`
+file than when it is read from a `.py` file; the only thing that’s faster
 about `.pyc` files is the speed with which they are loaded.
 * The module [`compileall`](../library/compileall.html#module-compileall "compileall: Tools for byte-compiling all Python source files in a directory tree.") can create .pyc files for all modules in a
 directory.
@@ -3957,7 +3957,7 @@ decisions, in [**PEP 3147**](https://peps.python.org/pep-3147/).
 
 
 Python comes with a library of standard modules, described in a separate
-document, the Python Library Reference (âLibrary Referenceâ hereafter). Some
+document, the Python Library Reference (“Library Reference” hereafter). Some
 modules are built into the interpreter; these provide access to operations that
 are not part of the core of the language but are nevertheless built in, either
 for efficiency or to provide access to operating system primitives such as
@@ -3987,7 +3987,7 @@ C>
 These two variables are only defined if the interpreter is in interactive mode.
 
 
-The variable `sys.path` is a list of strings that determines the interpreterâs
+The variable `sys.path` is a list of strings that determines the interpreter’s
 search path for modules. It is initialized to a default path taken from the
 environment variable [`PYTHONPATH`](../using/cmdline.html#envvar-PYTHONPATH), or from a built\-in default if
 [`PYTHONPATH`](../using/cmdline.html#envvar-PYTHONPATH) is not set. You can modify it using standard list
@@ -4106,16 +4106,16 @@ want a list of those, they are defined in the standard module
 ## 6\.4\. Packages
 
 
-Packages are a way of structuring Pythonâs module namespace by using âdotted
-module namesâ. For example, the module name `A.B` designates a submodule
+Packages are a way of structuring Python’s module namespace by using “dotted
+module names”. For example, the module name `A.B` designates a submodule
 named `B` in a package named `A`. Just like the use of modules saves the
-authors of different modules from having to worry about each otherâs global
+authors of different modules from having to worry about each other’s global
 variable names, the use of dotted module names saves the authors of multi\-module
 packages like NumPy or Pillow from having to worry about
-each otherâs module names.
+each other’s module names.
 
 
-Suppose you want to design a collection of modules (a âpackageâ) for the uniform
+Suppose you want to design a collection of modules (a “package”) for the uniform
 handling of sound files and sound data. There are many different sound file
 formats (usually recognized by their extension, for example: `.wav`,
 `.aiff`, `.au`), so you may need to create and maintain a growing
@@ -4123,7 +4123,7 @@ collection of modules for the conversion between the various file formats.
 There are also many different operations you might want to perform on sound data
 (such as mixing, adding echo, applying an equalizer function, creating an
 artificial stereo effect), so in addition you will be writing a never\-ending
-stream of modules to perform these operations. Hereâs a possible structure for
+stream of modules to perform these operations. Here’s a possible structure for
 your package (expressed in terms of a hierarchical filesystem):
 
 
@@ -4243,7 +4243,7 @@ exception is raised.
 
 Contrarily, when using syntax like `import item.subitem.subsubitem`, each item
 except for the last must be a package; the last item can be a module or a
-package but canât be a class or function or variable defined in the previous
+package but can’t be a class or function or variable defined in the previous
 item.
 
 
@@ -4259,12 +4259,12 @@ only happen when the sub\-module is explicitly imported.
 
 
 The only solution is for the package author to provide an explicit index of the
-package. The [`import`](../reference/simple_stmts.html#import) statement uses the following convention: if a packageâs
+package. The [`import`](../reference/simple_stmts.html#import) statement uses the following convention: if a package’s
 `__init__.py` code defines a list named `__all__`, it is taken to be the
 list of module names that should be imported when `from package import *` is
 encountered. It is up to the package author to keep this list up\-to\-date when a
 new version of the package is released. Package authors may also decide not to
-support it, if they donât see a use for importing \* from their package. For
+support it, if they don’t see a use for importing \* from their package. For
 example, the file `sound/effects/__init__.py` could contain the following
 code:
 
@@ -4377,7 +4377,7 @@ as the main module of a Python application must always use absolute imports.
 
 Packages support one more special attribute, [`__path__`](../reference/import.html#path__ "__path__"). This is
 initialized to be a list containing the name of the directory holding the
-packageâs `__init__.py` before the code in that file is executed. This
+package’s `__init__.py` before the code in that file is executed. This
 variable can be modified; doing so affects future searches for modules and
 subpackages contained in the package.
 
@@ -4392,9 +4392,9 @@ Footnotes
 
 
 \[[1](#id1)]
-In fact function definitions are also âstatementsâ that are âexecutedâ; the
+In fact function definitions are also ‘statements’ that are ‘executed’; the
 execution of a module\-level function definition adds the function name to
-the moduleâs global namespace.
+the module’s global namespace.
 
 
 
@@ -4419,13 +4419,13 @@ discuss some of the possibilities.
 ## 7\.1\. Fancier Output Formatting
 
 
-So far weâve encountered two ways of writing values: *expression statements* and
+So far we’ve encountered two ways of writing values: *expression statements* and
 the [`print()`](../library/functions.html#print "print") function. (A third way is using the [`write()`](../library/io.html#io.TextIOBase.write "io.TextIOBase.write") method
 of file objects; the standard output file can be referenced as `sys.stdout`.
 See the Library Reference for more information on this.)
 
 
-Often youâll want more control over the formatting of your output than simply
+Often you’ll want more control over the formatting of your output than simply
 printing space\-separated values. There are several ways to format output.
 
 
@@ -4444,9 +4444,9 @@ characters that can refer to variables or literal values.
 
 ```
 * The [`str.format()`](../library/stdtypes.html#str.format "str.format") method of strings requires more manual
-effort. Youâll still use `{` and `}` to mark where a variable
+effort. You’ll still use `{` and `}` to mark where a variable
 will be substituted and can provide detailed formatting directives,
-but youâll also need to provide the information to be formatted.
+but you’ll also need to provide the information to be formatted.
 
 
 
@@ -4464,7 +4464,7 @@ string type has some methods that perform useful operations for padding
 strings to a given column width.
 
 
-When you donât need fancy output but just want a quick display of some
+When you don’t need fancy output but just want a quick display of some
 variables for debugging purposes, you can convert any value to a string with
 the [`repr()`](../library/functions.html#repr "repr") or [`str()`](../library/stdtypes.html#str "str") functions.
 
@@ -4472,7 +4472,7 @@ the [`repr()`](../library/functions.html#repr "repr") or [`str()`](../library/st
 The [`str()`](../library/stdtypes.html#str "str") function is meant to return representations of values which are
 fairly human\-readable, while [`repr()`](../library/functions.html#repr "repr") is meant to generate representations
 which can be read by the interpreter (or will force a [`SyntaxError`](../library/exceptions.html#SyntaxError "SyntaxError") if
-there is no equivalent syntax). For objects which donât have a particular
+there is no equivalent syntax). For objects which don’t have a particular
 representation for human consumption, [`str()`](../library/stdtypes.html#str "str") will return the same value as
 [`repr()`](../library/functions.html#repr "repr"). Many values, such as numbers or structures like lists and
 dictionaries, have the same representation using either function. Strings, in
@@ -4648,7 +4648,7 @@ The story of Bill, Manfred, and Georg.
 ```
 
 
-If you have a really long format string that you donât want to split up, it
+If you have a really long format string that you don’t want to split up, it
 would be nice if you could reference the variables to be formatted by name
 instead of by position. This can be done by simply passing the dict and using
 square brackets `'[]'` to access the keys.
@@ -4713,7 +4713,7 @@ For a complete overview of string formatting with [`str.format()`](../library/st
 ### 7\.1\.3\. Manual String Formatting
 
 
-Hereâs the same table of squares and cubes, formatted manually:
+Here’s the same table of squares and cubes, formatted manually:
 
 
 
@@ -4745,8 +4745,8 @@ The [`str.rjust()`](../library/stdtypes.html#str.rjust "str.rjust") method of st
 field of a given width by padding it with spaces on the left. There are
 similar methods [`str.ljust()`](../library/stdtypes.html#str.ljust "str.ljust") and [`str.center()`](../library/stdtypes.html#str.center "str.center"). These methods do
 not write anything, they just return a new string. If the input string is too
-long, they donât truncate it, but return it unchanged; this will mess up your
-column lay\-out but thatâs usually better than the alternative, which would be
+long, they don’t truncate it, but return it unchanged; this will mess up your
+column lay\-out but that’s usually better than the alternative, which would be
 lying about a value. (If you really want truncation you can always add a
 slice operation, as in `x.ljust(n)[:n]`.)
 
@@ -4814,7 +4814,7 @@ will be used. *mode* can be `'r'` when the file will only be read, `'w'`
 for only writing (an existing file with the same name will be erased), and
 `'a'` opens the file for appending; any data written to the file is
 automatically added to the end. `'r+'` opens the file for both reading and
-writing. The *mode* argument is optional; `'r'` will be assumed if itâs
+writing. The *mode* argument is optional; `'r'` will be assumed if it’s
 omitted.
 
 
@@ -4857,7 +4857,7 @@ True
 ```
 
 
-If youâre not using the [`with`](../reference/compound_stmts.html#with) keyword, then you should call
+If you’re not using the [`with`](../reference/compound_stmts.html#with) keyword, then you should call
 `f.close()` to close the file and immediately free up any system
 resources used by it.
 
@@ -4897,11 +4897,11 @@ The rest of the examples in this section will assume that a file object called
 `f` has already been created.
 
 
-To read a fileâs contents, call `f.read(size)`, which reads some quantity of
+To read a file’s contents, call `f.read(size)`, which reads some quantity of
 data and returns it as a string (in text mode) or bytes object (in binary mode).
 *size* is an optional numeric argument. When *size* is omitted or negative, the
-entire contents of the file will be read and returned; itâs your problem if the
-file is twice as large as your machineâs memory. Otherwise, at most *size*
+entire contents of the file will be read and returned; it’s your problem if the
+file is twice as large as your machine’s memory. Otherwise, at most *size*
 characters (in text mode) or *size* bytes (in binary mode) are read and returned.
 If the end of the file has been reached, `f.read()` will return an empty
 string (`''`).
@@ -4919,7 +4919,7 @@ string (`''`).
 
 `f.readline()` reads a single line from the file; a newline character (`\n`)
 is left at the end of the string, and is only omitted on the last line of the
-file if the file doesnât end in a newline. This makes the return value
+file if the file doesn’t end in a newline. This makes the return value
 unambiguous; if `f.readline()` returns an empty string, the end of the file
 has been reached, while a blank line is represented by `'\n'`, a string
 containing only a single newline.
@@ -4968,8 +4968,8 @@ the number of characters written.
 ```
 
 
-Other types of objects need to be converted â either to a string (in text mode)
-or a bytes object (in binary mode) â before writing them:
+Other types of objects need to be converted – either to a string (in text mode)
+or a bytes object (in binary mode) – before writing them:
 
 
 
@@ -4982,12 +4982,12 @@ or a bytes object (in binary mode) â before writing them:
 ```
 
 
-`f.tell()` returns an integer giving the file objectâs current position in the file
+`f.tell()` returns an integer giving the file object’s current position in the file
 represented as number of bytes from the beginning of the file when in binary mode and
 an opaque number when in text mode.
 
 
-To change the file objectâs position, use `f.seek(offset, whence)`. The position is computed
+To change the file object’s position, use `f.seek(offset, whence)`. The position is computed
 from adding *offset* to a reference point; the reference point is selected by
 the *whence* argument. A *whence* value of 0 measures from the beginning
 of the file, 1 uses the current file position, and 2 uses the end of the file as
@@ -5135,7 +5135,7 @@ arbitrary code, if the data was crafted by a skilled attacker.
 # 8\. Errors and Exceptions
 
 
-Until now error messages havenât been more than mentioned, but if you have tried
+Until now error messages haven’t been more than mentioned, but if you have tried
 out the examples you have probably seen some. There are (at least) two
 distinguishable kinds of errors: *syntax errors* and *exceptions*.
 
@@ -5159,7 +5159,7 @@ SyntaxError: invalid syntax
 ```
 
 
-The parser repeats the offending line and displays little âarrowâs pointing
+The parser repeats the offending line and displays little ‘arrow’s pointing
 at the token in the line where the error was detected. The error may be
 caused by the absence of a token *before* the indicated token. In the
 example, the error is detected at the function [`print()`](../library/functions.html#print "print"), since a colon
@@ -5276,7 +5276,7 @@ may name multiple exceptions as a parenthesized tuple, for example:
 
 
 A class in an [`except`](../reference/compound_stmts.html#except) clause is compatible with an exception if it is
-the same class or a base class thereof (but not the other way around â an
+the same class or a base class thereof (but not the other way around — an
 *except clause* listing a derived class is not compatible with a base class).
 For example, the following code will print B, C, D in that order:
 
@@ -5306,11 +5306,11 @@ for cls in [B, C, D]:
 
 
 Note that if the *except clauses* were reversed (with `except B` first), it
-would have printed B, B, B â the first matching *except clause* is triggered.
+would have printed B, B, B — the first matching *except clause* is triggered.
 
 
 When an exception occurs, it may have associated values, also known as the
-exceptionâs *arguments*. The presence and types of the arguments depend on the
+exception’s *arguments*. The presence and types of the arguments depend on the
 exception type.
 
 
@@ -5343,7 +5343,7 @@ y = eggs
 ```
 
 
-The exceptionâs [`__str__()`](../reference/datamodel.html#object.__str__ "object.__str__") output is printed as the last part (âdetailâ)
+The exception’s [`__str__()`](../reference/datamodel.html#object.__str__ "object.__str__") output is printed as the last part (‘detail’)
 of the message for unhandled exceptions.
 
 
@@ -5386,7 +5386,7 @@ except Exception as err:
 ```
 
 
-The [`try`](../reference/compound_stmts.html#try) â¦ [`except`](../reference/compound_stmts.html#except) statement has an optional *else
+The [`try`](../reference/compound_stmts.html#try) … [`except`](../reference/compound_stmts.html#except) statement has an optional *else
 clause*, which, when present, must follow all *except clauses*. It is useful
 for code that must be executed if the *try clause* does not raise an exception.
 For example:
@@ -5408,7 +5408,7 @@ for arg in sys.argv[1:]:
 
 The use of the `else` clause is better than adding additional code to
 the [`try`](../reference/compound_stmts.html#try) clause because it avoids accidentally catching an exception
-that wasnât raised by the code being protected by the `try` â¦
+that wasn’t raised by the code being protected by the `try` …
 `except` statement.
 
 
@@ -5465,7 +5465,7 @@ raise ValueError  # shorthand for 'raise ValueError()'
 ```
 
 
-If you need to determine whether an exception was raised but donât intend to
+If you need to determine whether an exception was raised but don’t intend to
 handle it, a simpler form of the [`raise`](../reference/simple_stmts.html#raise) statement allows you to
 re\-raise the exception:
 
@@ -5591,7 +5591,7 @@ are usually kept simple, often only offering a number of attributes that allow
 information about the error to be extracted by handlers for the exception.
 
 
-Most exceptions are defined with names that end in âErrorâ, similar to the
+Most exceptions are defined with names that end in “Error”, similar to the
 naming of the standard exceptions.
 
 
@@ -5646,11 +5646,11 @@ re\-raised.
 [`continue`](../reference/simple_stmts.html#continue) or [`return`](../reference/simple_stmts.html#return) statement, the
 `finally` clause will execute just prior to the
 `break`, `continue` or `return`
-statementâs execution.
+statement’s execution.
 * If a `finally` clause includes a `return`
 statement, the returned value will be the one from the
-`finally` clauseâs `return` statement, not the
-value from the `try` clauseâs `return`
+`finally` clause’s `return` statement, not the
+value from the `try` clause’s `return`
 statement.
 
 
@@ -5877,7 +5877,7 @@ When an exception is created in order to be raised, it is usually initialized
 with information that describes the error that has occurred. There are cases
 where it is useful to add information after the exception was caught. For this
 purpose, exceptions have a method `add_note(note)` that accepts a string and
-adds it to the exceptionâs notes list. The standard traceback rendering
+adds it to the exception’s notes list. The standard traceback rendering
 includes all notes, in the order they were added, after the exception.
 
 
@@ -5963,7 +5963,7 @@ maintaining its state. Class instances can also have methods (defined by its
 class) for modifying its state.
 
 
-Compared with other programming languages, Pythonâs class mechanism adds classes
+Compared with other programming languages, Python’s class mechanism adds classes
 with a minimum of new syntax and semantics. It is a mixture of the class
 mechanisms found in C\+\+ and Modula\-3\. Python classes provide all the standard
 features of Object Oriented Programming: the class inheritance mechanism allows
@@ -5976,7 +5976,7 @@ runtime, and can be modified further after creation.
 
 In C\+\+ terminology, normally class members (including the data members) are
 *public* (except see below [Private Variables](#tut-private)), and all member functions are
-*virtual*. As in Modula\-3, there are no shorthands for referencing the objectâs
+*virtual*. As in Modula\-3, there are no shorthands for referencing the object’s
 members from its methods: the method function is declared with an explicit first
 argument representing the object, which is provided implicitly by the call. As
 in Smalltalk, classes themselves are objects. This provides semantics for
@@ -6005,7 +6005,7 @@ involving mutable objects such as lists, dictionaries, and most other types.
 This is usually used to the benefit of the program, since aliases behave like
 pointers in some respects. For example, passing an object is cheap since only a
 pointer is passed by the implementation; and if a function modifies an object
-passed as an argument, the caller will see the change â this eliminates the
+passed as an argument, the caller will see the change — this eliminates the
 need for two different argument passing mechanisms as in Pascal.
 
 
@@ -6014,34 +6014,34 @@ need for two different argument passing mechanisms as in Pascal.
 ## 9\.2\. Python Scopes and Namespaces
 
 
-Before introducing classes, I first have to tell you something about Pythonâs
+Before introducing classes, I first have to tell you something about Python’s
 scope rules. Class definitions play some neat tricks with namespaces, and you
-need to know how scopes and namespaces work to fully understand whatâs going on.
+need to know how scopes and namespaces work to fully understand what’s going on.
 Incidentally, knowledge about this subject is useful for any advanced Python
 programmer.
 
 
-Letâs begin with some definitions.
+Let’s begin with some definitions.
 
 
 A *namespace* is a mapping from names to objects. Most namespaces are currently
-implemented as Python dictionaries, but thatâs normally not noticeable in any
+implemented as Python dictionaries, but that’s normally not noticeable in any
 way (except for performance), and it may change in the future. Examples of
 namespaces are: the set of built\-in names (containing functions such as [`abs()`](../library/functions.html#abs "abs"), and
 built\-in exception names); the global names in a module; and the local names in
 a function invocation. In a sense the set of attributes of an object also form
 a namespace. The important thing to know about namespaces is that there is
 absolutely no relation between names in different namespaces; for instance, two
-different modules may both define a function `maximize` without confusion â
+different modules may both define a function `maximize` without confusion —
 users of the modules must prefix it with the module name.
 
 
-By the way, I use the word *attribute* for any name following a dot â for
+By the way, I use the word *attribute* for any name following a dot — for
 example, in the expression `z.real`, `real` is an attribute of the object
 `z`. Strictly speaking, references to names in modules are attribute
 references: in the expression `modname.funcname`, `modname` is a module
 object and `funcname` is an attribute of it. In this case there happens to be
-a straightforward mapping between the moduleâs attributes and the global names
+a straightforward mapping between the module’s attributes and the global names
 defined in the module: they share the same namespace! [\[1]](#id2)
 
 
@@ -6071,7 +6071,7 @@ local namespace.
 
 
 A *scope* is a textual region of a Python program where a namespace is directly
-accessible. âDirectly accessibleâ here means that an unqualified reference to a
+accessible. “Directly accessible” here means that an unqualified reference to a
 name attempts to find the name in the namespace.
 
 
@@ -6083,12 +6083,12 @@ directly accessible:
 * the innermost scope, which is searched first, contains the local names
 * the scopes of any enclosing functions, which are searched starting with the
 nearest enclosing scope, contain non\-local, but also non\-global names
-* the next\-to\-last scope contains the current moduleâs global names
+* the next\-to\-last scope contains the current module’s global names
 * the outermost scope (searched last) is the namespace containing built\-in names
 
 
 If a name is declared global, then all references and assignments go directly to
-the next\-to\-last scope containing the moduleâs global names. To rebind variables
+the next\-to\-last scope containing the module’s global names. To rebind variables
 found outside of the innermost scope, the [`nonlocal`](../reference/simple_stmts.html#nonlocal) statement can be
 used; if not declared nonlocal, those variables are read\-only (an attempt to
 write to such a variable will simply create a *new* local variable in the
@@ -6097,22 +6097,22 @@ innermost scope, leaving the identically named outer variable unchanged).
 
 Usually, the local scope references the local names of the (textually) current
 function. Outside functions, the local scope references the same namespace as
-the global scope: the moduleâs namespace. Class definitions place yet another
+the global scope: the module’s namespace. Class definitions place yet another
 namespace in the local scope.
 
 
 It is important to realize that scopes are determined textually: the global
-scope of a function defined in a module is that moduleâs namespace, no matter
+scope of a function defined in a module is that module’s namespace, no matter
 from where or by what alias the function is called. On the other hand, the
-actual search for names is done dynamically, at run time â however, the
-language definition is evolving towards static name resolution, at âcompileâ
-time, so donât rely on dynamic name resolution! (In fact, local variables are
+actual search for names is done dynamically, at run time — however, the
+language definition is evolving towards static name resolution, at “compile”
+time, so don’t rely on dynamic name resolution! (In fact, local variables are
 already determined statically.)
 
 
-A special quirk of Python is that â if no [`global`](../reference/simple_stmts.html#global) or [`nonlocal`](../reference/simple_stmts.html#nonlocal)
-statement is in effect â assignments to names always go into the innermost scope.
-Assignments do not copy data â they just bind names to objects. The same is true
+A special quirk of Python is that – if no [`global`](../reference/simple_stmts.html#global) or [`nonlocal`](../reference/simple_stmts.html#nonlocal)
+statement is in effect – assignments to names always go into the innermost scope.
+Assignments do not copy data — they just bind names to objects. The same is true
 for deletions: the statement `del x` removes the binding of `x` from the
 namespace referenced by the local scope. In fact, all operations that introduce
 new names use the local scope: in particular, [`import`](../reference/simple_stmts.html#import) statements and
@@ -6175,7 +6175,7 @@ In global scope: global spam
 ```
 
 
-Note how the *local* assignment (which is default) didnât change *scope\_test*'s
+Note how the *local* assignment (which is default) didn’t change *scope\_test*'s
 binding of *spam*. The [`nonlocal`](../reference/simple_stmts.html#nonlocal) assignment changed *scope\_test*'s
 binding of *spam*, and the [`global`](../reference/simple_stmts.html#global) assignment changed the module\-level
 binding.
@@ -6220,21 +6220,21 @@ definition in a branch of an [`if`](../reference/compound_stmts.html#if) stateme
 
 
 In practice, the statements inside a class definition will usually be function
-definitions, but other statements are allowed, and sometimes useful â weâll
+definitions, but other statements are allowed, and sometimes useful — we’ll
 come back to this later. The function definitions inside a class normally have
 a peculiar form of argument list, dictated by the calling conventions for
-methods â again, this is explained later.
+methods — again, this is explained later.
 
 
 When a class definition is entered, a new namespace is created, and used as the
-local scope â thus, all assignments to local variables go into this new
+local scope — thus, all assignments to local variables go into this new
 namespace. In particular, function definitions bind the name of the new
 function here.
 
 
 When a class definition is left normally (via the end), a *class object* is
 created. This is basically a wrapper around the contents of the namespace
-created by the class definition; weâll learn more about class objects in the
+created by the class definition; we’ll learn more about class objects in the
 next section. The original local scope (the one in effect just before the class
 definition was entered) is reinstated, and the class object is bound here to the
 class name given in the class definition header (`ClassName` in the
@@ -6252,7 +6252,7 @@ instantiation.
 
 *Attribute references* use the standard syntax used for all attribute references
 in Python: `obj.name`. Valid attribute names are all the names that were in
-the classâs namespace when the class object was created. So, if the class
+the class’s namespace when the class object was created. So, if the class
 definition looked like this:
 
 
@@ -6291,7 +6291,7 @@ creates a new *instance* of the class and assigns this object to the local
 variable `x`.
 
 
-The instantiation operation (âcallingâ a class object) creates an empty object.
+The instantiation operation (“calling” a class object) creates an empty object.
 Many classes like to create objects with instances customized to a specific
 initial state. Therefore a class may define a special method named
 [`__init__()`](../reference/datamodel.html#object.__init__ "object.__init__"), like this:
@@ -6346,8 +6346,8 @@ instance objects are attribute references. There are two kinds of valid
 attribute names: data attributes and methods.
 
 
-*data attributes* correspond to âinstance variablesâ in Smalltalk, and to âdata
-membersâ in C\+\+. Data attributes need not be declared; like local variables,
+*data attributes* correspond to “instance variables” in Smalltalk, and to “data
+members” in C\+\+. Data attributes need not be declared; like local variables,
 they spring into existence when they are first assigned to. For example, if
 `x` is the instance of `MyClass` created above, the following piece of
 code will print the value `16`, without leaving a trace:
@@ -6365,10 +6365,10 @@ del x.counter
 
 
 The other kind of instance attribute reference is a *method*. A method is a
-function that âbelongs toâ an object. (In Python, the term method is not unique
+function that “belongs to” an object. (In Python, the term method is not unique
 to class instances: other object types can have methods as well. For example,
 list objects have methods called append, insert, remove, sort, and so on.
-However, in the following discussion, weâll use the term method exclusively to
+However, in the following discussion, we’ll use the term method exclusively to
 mean methods of class instance objects, unless explicitly stated otherwise.)
 
 
@@ -6376,7 +6376,7 @@ Valid method names of an instance object depend on its class. By definition,
 all attributes of a class that are function objects define corresponding
 methods of its instances. So in our example, `x.f` is a valid method
 reference, since `MyClass.f` is a function, but `x.i` is not, since
-`MyClass.i` is not. But `x.f` is not the same thing as `MyClass.f` â it
+`MyClass.i` is not. But `x.f` is not the same thing as `MyClass.f` — it
 is a *method object*, not a function object.
 
 
@@ -6416,7 +6416,7 @@ What exactly happens when a method is called? You may have noticed that
 `x.f()` was called without an argument above, even though the function
 definition for `f()` specified an argument. What happened to the argument?
 Surely Python raises an exception when a function that requires an argument is
-called without any â even if the argument isnât actually usedâ¦
+called without any — even if the argument isn’t actually used…
 
 
 Actually, you may have guessed the answer: the special thing about methods is
@@ -6424,11 +6424,11 @@ that the instance object is passed as the first argument of the function. In our
 example, the call `x.f()` is exactly equivalent to `MyClass.f(x)`. In
 general, calling a method with a list of *n* arguments is equivalent to calling
 the corresponding function with an argument list that is created by inserting
-the methodâs instance object before the first argument.
+the method’s instance object before the first argument.
 
 
 In general, methods work as follows. When a non\-data attribute
-of an instance is referenced, the instanceâs class is searched.
+of an instance is referenced, the instance’s class is searched.
 If the name denotes a valid class attribute that is a function object,
 references to both the instance object and the function object
 are packed into a method object. When the method object is called
@@ -6553,18 +6553,18 @@ storage east
 
 
 Data attributes may be referenced by methods as well as by ordinary users
-(âclientsâ) of an object. In other words, classes are not usable to implement
+(“clients”) of an object. In other words, classes are not usable to implement
 pure abstract data types. In fact, nothing in Python makes it possible to
-enforce data hiding â it is all based upon convention. (On the other hand,
+enforce data hiding — it is all based upon convention. (On the other hand,
 the Python implementation, written in C, can completely hide implementation
 details and control access to an object if necessary; this can be used by
 extensions to Python written in C.)
 
 
-Clients should use data attributes with care â clients may mess up invariants
+Clients should use data attributes with care — clients may mess up invariants
 maintained by the methods by stamping on their data attributes. Note that
 clients may add data attributes of their own to an instance object without
-affecting the validity of the methods, as long as name conflicts are avoided â
+affecting the validity of the methods, as long as name conflicts are avoided —
 again, a naming convention can save a lot of headaches here.
 
 
@@ -6606,7 +6606,7 @@ class C:
 
 Now `f`, `g` and `h` are all attributes of class `C` that refer to
 function objects, and consequently they are all methods of instances of
-`C` â `h` being exactly equivalent to `g`. Note that this practice
+`C` — `h` being exactly equivalent to `g`. Note that this practice
 usually only serves to confuse the reader of a program.
 
 
@@ -6637,7 +6637,7 @@ rarely encounters a good reason for using global data in a method, there are
 many legitimate uses of the global scope: for one thing, functions and modules
 imported into the global scope can be used by methods, as well as functions and
 classes defined in it. Usually, the class containing the method is itself
-defined in this global scope, and in the next section weâll find some good
+defined in this global scope, and in the next section we’ll find some good
 reasons why a method would want to reference its own class.
 
 
@@ -6650,7 +6650,7 @@ It is stored as `object.__class__`.
 ## 9\.5\. Inheritance
 
 
-Of course, a language feature would not be worthy of the name âclassâ without
+Of course, a language feature would not be worthy of the name “class” without
 supporting inheritance. The syntax for a derived class definition looks like
 this:
 
@@ -6687,7 +6687,7 @@ in the class, the search proceeds to look in the base class. This rule is
 applied recursively if the base class itself is derived from some other class.
 
 
-Thereâs nothing special about instantiation of derived classes:
+There’s nothing special about instantiation of derived classes:
 `DerivedClassName()` creates a new instance of the class. Method references
 are resolved as follows: the corresponding class attribute is searched,
 descending down the chain of base classes if necessary, and the method reference
@@ -6712,7 +6712,7 @@ scope.)
 Python has two built\-in functions that work with inheritance:
 
 
-* Use [`isinstance()`](../library/functions.html#isinstance "isinstance") to check an instanceâs type: `isinstance(obj, int)`
+* Use [`isinstance()`](../library/functions.html#isinstance "isinstance") to check an instance’s type: `isinstance(obj, int)`
 will be `True` only if `obj.__class__` is [`int`](../library/functions.html#int "int") or some class
 derived from [`int`](../library/functions.html#int "int").
 * Use [`issubclass()`](../library/functions.html#issubclass "issubclass") to check class inheritance: `issubclass(bool, int)`
@@ -6776,8 +6776,8 @@ extensible classes with multiple inheritance. For more detail, see
 ## 9\.6\. Private Variables
 
 
-âPrivateâ instance variables that cannot be accessed except from inside an
-object donât exist in Python. However, there is a convention that is followed
+“Private” instance variables that cannot be accessed except from inside an
+object don’t exist in Python. However, there is a convention that is followed
 by most Python code: a name prefixed with an underscore (e.g. `_spam`) should
 be treated as a non\-public part of the API (whether it is a function, a method
 or a data member). It should be considered an implementation detail and subject
@@ -6846,8 +6846,8 @@ to code that is byte\-compiled together. The same restriction applies to
 ## 9\.7\. Odds and Ends
 
 
-Sometimes it is useful to have a data type similar to the Pascal ârecordâ or C
-âstructâ, bundling together a few named data items. The idiomatic approach
+Sometimes it is useful to have a data type similar to the Pascal “record” or C
+“struct”, bundling together a few named data items. The idiomatic approach
 is to use [`dataclasses`](../library/dataclasses.html#module-dataclasses "dataclasses: Generate special methods on user-defined classes.") for this purpose:
 
 
@@ -7085,7 +7085,7 @@ Footnotes
 
 \[[1](#id1)]
 Except for one thing. Module objects have a secret read\-only attribute called
-[`__dict__`](../library/stdtypes.html#object.__dict__ "object.__dict__") which returns the dictionary used to implement the moduleâs
+[`__dict__`](../library/stdtypes.html#object.__dict__ "object.__dict__") which returns the dictionary used to implement the module’s
 namespace; the name [`__dict__`](../library/stdtypes.html#object.__dict__ "object.__dict__") is an attribute but not a global name.
 Obviously, using this violates the abstraction of namespace implementation, and
 should be restricted to things like post\-mortem debuggers.
@@ -7182,7 +7182,7 @@ wildcard searches:
 
 
 Common utility scripts often need to process command line arguments. These
-arguments are stored in the [`sys`](../library/sys.html#module-sys "sys: Access system-specific parameters and functions.") moduleâs *argv* attribute as a list. For
+arguments are stored in the [`sys`](../library/sys.html#module-sys "sys: Access system-specific parameters and functions.") module’s *argv* attribute as a list. For
 instance the following output results from running `python demo.py one two
 three` at the command line:
 
@@ -7456,7 +7456,7 @@ module quickly demonstrates a modest performance advantage:
 ```
 
 
-In contrast to [`timeit`](../library/timeit.html#module-timeit "timeit: Measure the execution time of small code snippets.")âs fine level of granularity, the [`profile`](../library/profile.html#module-profile "profile: Python source profiler.") and
+In contrast to [`timeit`](../library/timeit.html#module-timeit "timeit: Measure the execution time of small code snippets.")’s fine level of granularity, the [`profile`](../library/profile.html#module-profile "profile: Python source profiler.") and
 [`pstats`](../library/profile.html#module-pstats "pstats: Statistics object for use with the profiler.") modules provide tools for identifying time critical sections in
 larger blocks of code.
 
@@ -7472,7 +7472,7 @@ development process.
 
 
 The [`doctest`](../library/doctest.html#module-doctest "doctest: Test pieces of code within docstrings.") module provides a tool for scanning a module and validating
-tests embedded in a programâs docstrings. Test construction is as simple as
+tests embedded in a program’s docstrings. Test construction is as simple as
 cutting\-and\-pasting a typical call along with its results into the docstring.
 This improves the documentation by providing the user with an example and it
 allows the doctest module to make sure the code remains true to the
@@ -7524,12 +7524,12 @@ unittest.main()  # Calling from the command line invokes all tests
 ## 10\.12\. Batteries Included
 
 
-Python has a âbatteries includedâ philosophy. This is best seen through the
+Python has a “batteries included” philosophy. This is best seen through the
 sophisticated and robust capabilities of its larger packages. For example:
 
 
 * The [`xmlrpc.client`](../library/xmlrpc.client.html#module-xmlrpc.client "xmlrpc.client: XML-RPC client access.") and [`xmlrpc.server`](../library/xmlrpc.server.html#module-xmlrpc.server "xmlrpc.server: Basic XML-RPC server implementations.") modules make implementing
-remote procedure calls into an almost trivial task. Despite the modulesâ
+remote procedure calls into an almost trivial task. Despite the modules’
 names, no direct knowledge or handling of XML is needed.
 * The [`email`](../library/email.html#module-email "email: Package supporting the parsing, manipulating, and generating email messages.") package is a library for managing email messages, including
 MIME and other [**RFC 2822**](https://datatracker.ietf.org/doc/html/rfc2822.html)\-based message documents. Unlike [`smtplib`](../library/smtplib.html#module-smtplib "smtplib: SMTP protocol client (requires sockets).") and
@@ -7559,7 +7559,7 @@ accessed using slightly nonstandard SQL syntax.
 
 
 
-# 11\. Brief Tour of the Standard Library â Part II
+# 11\. Brief Tour of the Standard Library — Part II
 
 
 This second tour covers more advanced modules that support professional
@@ -7585,7 +7585,7 @@ abbreviated displays of large or deeply nested containers:
 
 The [`pprint`](../library/pprint.html#module-pprint "pprint: Data pretty printer.") module offers more sophisticated control over printing both
 built\-in and user defined objects in a way that is readable by the interpreter.
-When the result is longer than one line, the âpretty printerâ adds line breaks
+When the result is longer than one line, the “pretty printer” adds line breaks
 and indentation to more clearly reveal data structure:
 
 
@@ -7626,7 +7626,7 @@ to separate the wrapped lines.
 
 
 The [`locale`](../library/locale.html#module-locale "locale: Internationalization services.") module accesses a database of culture specific data formats.
-The grouping attribute of localeâs format function provides a direct way of
+The grouping attribute of locale’s format function provides a direct way of
 formatting numbers with group separators:
 
 
@@ -7675,7 +7675,7 @@ spaces. Writing `$$` creates a single escaped `$`:
 The [`substitute()`](../library/string.html#string.Template.substitute "string.Template.substitute") method raises a [`KeyError`](../library/exceptions.html#KeyError "KeyError") when a
 placeholder is not supplied in a dictionary or a keyword argument. For
 mail\-merge style applications, user supplied data may be incomplete and the
-[`safe_substitute()`](../library/string.html#string.Template.safe_substitute "string.Template.safe_substitute") method may be more appropriate â
+[`safe_substitute()`](../library/string.html#string.Template.safe_substitute "string.Template.safe_substitute") method may be more appropriate —
 it will leave placeholders unchanged if data is missing:
 
 
@@ -8094,11 +8094,11 @@ Decimal('0.142857142857142857142857142857142857')
 ## 12\.1\. Introduction
 
 
-Python applications will often use packages and modules that donât
+Python applications will often use packages and modules that don’t
 come as part of the standard library. Applications will sometimes
 need a specific version of a library, because the application may
 require that a particular bug has been fixed or the application may be
-written using an obsolete version of the libraryâs interface.
+written using an obsolete version of the library’s interface.
 
 
 This means it may not be possible for one Python installation to meet
@@ -8118,7 +8118,7 @@ To resolve the earlier example of conflicting requirements,
 application A can have its own virtual environment with version 1\.0
 installed while application B has another virtual environment with version 2\.0\.
 If application B requires a library be upgraded to version 3\.0, this will
-not affect application Aâs environment.
+not affect application A’s environment.
 
 
 
@@ -8144,7 +8144,7 @@ python -m venv tutorial-env
 ```
 
 
-This will create the `tutorial-env` directory if it doesnât exist,
+This will create the `tutorial-env` directory if it doesn’t exist,
 and also create directories inside it containing a copy of the Python
 interpreter and various supporting files.
 
@@ -8156,7 +8156,7 @@ exists. It also prevents clashing with `.env` environment variable
 definition files that some tooling supports.
 
 
-Once youâve created a virtual environment, you may activate it.
+Once you’ve created a virtual environment, you may activate it.
 
 
 On Windows, run:
@@ -8185,8 +8185,8 @@ source tutorial-env/bin/activate
 instead.)
 
 
-Activating the virtual environment will change your shellâs prompt to show what
-virtual environment youâre using, and modify the environment so that running
+Activating the virtual environment will change your shell’s prompt to show what
+virtual environment you’re using, and modify the environment so that running
 `python` will get you that particular version and installation of Python.
 For example:
 
@@ -8230,12 +8230,12 @@ Package Index](https://pypi.org). You can browse the Python
 Package Index by going to it in your web browser.
 
 
-`pip` has a number of subcommands: âinstallâ, âuninstallâ,
-âfreezeâ, etc. (Consult the [Installing Python Modules](../installing/index.html#installing-index) guide for
+`pip` has a number of subcommands: “install”, “uninstall”,
+“freeze”, etc. (Consult the [Installing Python Modules](../installing/index.html#installing-index) guide for
 complete documentation for `pip`.)
 
 
-You can install the latest version of a package by specifying a packageâs name:
+You can install the latest version of a package by specifying a package’s name:
 
 
 
@@ -8363,7 +8363,7 @@ Successfully installed novas-3.1.1.3 numpy-1.9.2 requests-2.7.0
 
 
 `pip` has many more options. Consult the [Installing Python Modules](../installing/index.html#installing-index)
-guide for complete documentation for `pip`. When youâve written
+guide for complete documentation for `pip`. When you’ve written
 a package and want to make it available on the Python Package Index,
 consult the [Python packaging user guide](https://packaging.python.org/en/latest/tutorials/packaging-projects/).
 
@@ -8378,12 +8378,12 @@ consult the [Python packaging user guide](https://packaging.python.org/en/latest
 # 13\. What Now?
 
 
-Reading this tutorial has probably reinforced your interest in using Python â
+Reading this tutorial has probably reinforced your interest in using Python —
 you should be eager to apply Python to solving your real\-world problems. Where
 should you go to learn more?
 
 
-This tutorial is part of Pythonâs documentation set. Some other documents in
+This tutorial is part of Python’s documentation set. Some other documents in
 the set are:
 
 
@@ -8396,11 +8396,11 @@ library. The standard Python distribution includes a *lot* of additional code.
 There are modules to read Unix mailboxes, retrieve documents via HTTP, generate
 random numbers, parse command\-line options, compress data,
 and many other tasks. Skimming through the Library Reference will give you an
-idea of whatâs available.
+idea of what’s available.
 * [Installing Python Modules](../installing/index.html#installing-index) explains how to install additional modules written
 by other Python users.
-* [The Python Language Reference](../reference/index.html#reference-index): A detailed explanation of Pythonâs syntax and
-semantics. Itâs heavy reading, but is useful as a complete guide to the
+* [The Python Language Reference](../reference/index.html#reference-index): A detailed explanation of Python’s syntax and
+semantics. It’s heavy reading, but is useful as a complete guide to the
 language itself.
 
 
@@ -8409,7 +8409,7 @@ More Python resources:
 
 * <https://www.python.org>: The major Python web site. It contains code,
 documentation, and pointers to Python\-related pages around the web.
-* <https://docs.python.org>: Fast access to Pythonâs documentation.
+* <https://docs.python.org>: Fast access to Python’s documentation.
 * <https://pypi.org>: The Python Package Index, previously also nicknamed
 the Cheese Shop [\[1]](#id2), is an index of user\-created Python modules that are available
 for download. Once you begin releasing code, you can register it here so that
@@ -8417,7 +8417,7 @@ others can find it.
 * <https://code.activestate.com/recipes/langs/python/>: The Python Cookbook is a
 sizable collection of code examples, larger modules, and useful scripts.
 Particularly notable contributions are collected in a book also titled Python
-Cookbook (OâReilly \& Associates, ISBN 0\-596\-00797\-3\.)
+Cookbook (O’Reilly \& Associates, ISBN 0\-596\-00797\-3\.)
 * <https://pyvideo.org> collects links to Python\-related videos from
 conferences and user\-group meetings.
 * <https://scipy.org>: The Scientific Python project includes modules for fast
@@ -8447,8 +8447,8 @@ Footnotes
 
 
 \[[1](#id1)]
-âCheese Shopâ is a Monty Pythonâs sketch: a customer enters a cheese shop,
-but whatever cheese he asks for, the clerk says itâs missing.
+“Cheese Shop” is a Monty Python’s sketch: a customer enters a cheese shop,
+but whatever cheese he asks for, the clerk says it’s missing.
 
 
 
@@ -8466,7 +8466,7 @@ Some versions of the Python interpreter support editing of the current input
 line and history substitution, similar to facilities found in the Korn shell and
 the GNU Bash shell. This is implemented using the [GNU Readline](https://tiswww.case.edu/php/chet/readline/rltop.html) library,
 which supports various styles of editing. This library has its own
-documentation which we wonât duplicate here.
+documentation which we won’t duplicate here.
 
 
 
@@ -8495,7 +8495,7 @@ session.
 This facility is an enormous step forward compared to earlier versions of the
 interpreter; however, some wishes are left: It would be nice if the proper
 indentation were suggested on continuation lines (the parser knows if an indent
-token is required next). The completion mechanism might use the interpreterâs
+token is required next). The completion mechanism might use the interpreter’s
 symbol table. A command to check (or even suggest) matching parentheses,
 quotes, etc., would also be useful.
 
@@ -8562,12 +8562,12 @@ or, better,
 ```
 
 
-and so on. No matter how many digits youâre willing to write down, the result
+and so on. No matter how many digits you’re willing to write down, the result
 will never be exactly 1/3, but will be an increasingly better approximation of
 1/3\.
 
 
-In the same way, no matter how many base 2 digits youâre willing to use, the
+In the same way, no matter how many base 2 digits you’re willing to use, the
 decimal value 0\.1 cannot be represented exactly as a base 2 fraction. In base
 2, 1/10 is the infinitely repeating fraction
 
@@ -8634,8 +8634,8 @@ these and simply display `0.1`.
 
 
 Note that this is in the very nature of binary floating\-point: this is not a bug
-in Python, and it is not a bug in your code either. Youâll see the same kind of
-thing in all languages that support your hardwareâs floating\-point arithmetic
+in Python, and it is not a bug in your code either. You’ll see the same kind of
+thing in all languages that support your hardware’s floating\-point arithmetic
 (although some languages may not *display* the difference by default, or in all
 output modes).
 
@@ -8657,7 +8657,7 @@ For more pleasant output, you may wish to use string formatting to produce a lim
 ```
 
 
-Itâs important to realize that this is, in a real sense, an illusion: youâre
+It’s important to realize that this is, in a real sense, an illusion: you’re
 simply rounding the *display* of the true machine value.
 
 
@@ -8700,7 +8700,7 @@ True
 
 
 Binary floating\-point arithmetic holds many surprises like this. The problem
-with â0\.1â is explained in precise detail below, in the âRepresentation Errorâ
+with “0\.1” is explained in precise detail below, in the “Representation Error”
 section. See [Examples of Floating Point Problems](https://jvns.ca/blog/2023/01/13/examples-of-floating-point-problems/) for
 a pleasant summary of how binary floating\-point works and the kinds of
 problems commonly encountered in practice. Also see
@@ -8708,19 +8708,19 @@ problems commonly encountered in practice. Also see
 for a more complete account of other common surprises.
 
 
-As that says near the end, âthere are no easy answers.â Still, donât be unduly
+As that says near the end, “there are no easy answers.” Still, don’t be unduly
 wary of floating\-point! The errors in Python float operations are inherited
 from the floating\-point hardware, and on most machines are on the order of no
-more than 1 part in 2\*\*53 per operation. Thatâs more than adequate for most
-tasks, but you do need to keep in mind that itâs not decimal arithmetic and
+more than 1 part in 2\*\*53 per operation. That’s more than adequate for most
+tasks, but you do need to keep in mind that it’s not decimal arithmetic and
 that every float operation can suffer a new rounding error.
 
 
 While pathological cases do exist, for most casual use of floating\-point
-arithmetic youâll see the result you expect in the end if you simply round the
+arithmetic you’ll see the result you expect in the end if you simply round the
 display of your final results to the number of decimal digits you expect.
 [`str()`](../library/stdtypes.html#str "str") usually suffices, and for finer control see the [`str.format()`](../library/stdtypes.html#str.format "str.format")
-methodâs format specifiers in [Format String Syntax](../library/string.html#formatstrings).
+method’s format specifiers in [Format String Syntax](../library/string.html#formatstrings).
 
 
 For use cases which require exact decimal representation, try using the
@@ -8795,7 +8795,7 @@ data with other languages that support the same format (such as Java and C99\).
 
 
 Another helpful tool is the [`math.fsum()`](../library/math.html#math.fsum "math.fsum") function which helps mitigate
-loss\-of\-precision during summation. It tracks âlost digitsâ as values are
+loss\-of\-precision during summation. It tracks “lost digits” as values are
 added onto a running total. That can make a difference in overall accuracy
 so that the errors do not accumulate to the point where they affect the
 final total:
@@ -8815,7 +8815,7 @@ True
 ## 15\.1\. Representation Error
 
 
-This section explains the â0\.1â example in detail, and shows how you can perform
+This section explains the “0\.1” example in detail, and shows how you can perform
 an exact analysis of cases like this yourself. Basic familiarity with binary
 floating\-point representation is assumed.
 
@@ -8823,13 +8823,13 @@ floating\-point representation is assumed.
 *Representation error* refers to the fact that some (most, actually)
 decimal fractions cannot be represented exactly as binary (base 2\) fractions.
 This is the chief reason why Python (or Perl, C, C\+\+, Java, Fortran, and many
-others) often wonât display the exact decimal number you expect.
+others) often won’t display the exact decimal number you expect.
 
 
 Why is that? 1/10 is not exactly representable as a binary fraction. Since at
 least 2000, almost all machines use IEEE 754 binary floating\-point arithmetic,
-and almost all platforms map Python floats to IEEE 754 binary64 âdouble
-precisionâ values. IEEE 754 binary64 values contain 53 bits of precision, so
+and almost all platforms map Python floats to IEEE 754 binary64 “double
+precision” values. IEEE 754 binary64 values contain 53 bits of precision, so
 on input the computer strives to convert 0\.1 to the closest fraction it can of
 the form *J*/2\*\**N* where *J* is an integer containing exactly 53 bits.
 Rewriting
@@ -8915,7 +8915,7 @@ if we had not rounded up, the quotient would have been a little bit smaller than
 1/10\. But in no case can it be *exactly* 1/10!
 
 
-So the computer never âseesâ 1/10: what it sees is the exact fraction given
+So the computer never “sees” 1/10: what it sees is the exact fraction given
 above, the best IEEE 754 double approximation it can get:
 
 
@@ -9018,7 +9018,7 @@ statement.
 ### 16\.1\.2\. Executable Python Scripts
 
 
-On BSDâish Unix systems, Python scripts can be made directly executable, like
+On BSD’ish Unix systems, Python scripts can be made directly executable, like
 shell scripts, by putting the line
 
 
@@ -9029,7 +9029,7 @@ shell scripts, by putting the line
 ```
 
 
-(assuming that the interpreter is on the userâs `PATH`) at the beginning
+(assuming that the interpreter is on the user’s `PATH`) at the beginning
 of the script and giving the file an executable mode. The `#!` must be the
 first two characters of the file. On some platforms, this first line must end
 with a Unix\-style line ending (`'\n'`), not a Windows (`'\r\n'`) line
@@ -9048,7 +9048,7 @@ $ chmod +x myscript.py
 ```
 
 
-On Windows systems, there is no notion of an âexecutable modeâ. The Python
+On Windows systems, there is no notion of an “executable mode”. The Python
 installer automatically associates `.py` files with `python.exe` so that
 a double\-click on a Python file will run it as a script. The extension can
 also be `.pyw`, in that case, the console window that normally appears is
